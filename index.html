@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPT Application Date Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>OPT Application Date Manager</h1>
+        <form id="optForm">
+            <label for="completionDate">PROGRAM END DATE</label>
+            <input type="date" id="completionDate" name="completionDate" required>
+            
+            <button type="submit">Calculate Dates</button>
+        </form>
+        <div id="result" class="hidden">
+            <h2>Post-Completion OPT Application Window</h2>
+            <div class="timeline">
+                <div class="timeline-point" id="earlyDate">
+                    <span class="date-label" id="earlyDateLabel"></span>
+                </div>
+                <div class="timeline-point" id="completionDateDisplay">
+                    <span class="date-label" id="completionDateLabel"></span>
+                </div>
+                <div class="timeline-point" id="lastDate">
+                    <span class="date-label" id="lastDateLabel"></span>
+                </div>
+                <div class="timeline-road"></div>
+                <div class="timeline-marker" id="firstToSecond">90 days</div>
+                <div class="timeline-marker" id="secondToThird">60 days</div>
+            </div>
+            
+            <p class="info-text">Your Program end date: <span id="completionDateText" class="highlight"></span>. The earliest date you can apply for an OPT I-20 with the USCIS is <span id="earlyDateText"></span>.</p>
+            <p class="info-text">The deadline for submitting your application to USCIS is <span id="lastDateText" class="highlight"></span>. Apply as soon as you can! It takes about 90 days for USCIS to process your application.</p>
+        
+            <h2>Choosing Your OPT Date</h2>
+            <p>Earliest OPT start date: <span id="earliestStartDate"></span></p>
+            <p>Latest OPT start date: <span id="latestStartDate"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
